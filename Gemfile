@@ -28,7 +28,7 @@ gem 'bootstrap-sass'
 
 gem 'devise'
 
-
+gem 'paperclip', :git => "git://github.com/thoughtbot/paperclip.git"
 
 
 
