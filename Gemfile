@@ -26,6 +26,8 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass' 
 
+gem 'devise'
+
 
 
 
