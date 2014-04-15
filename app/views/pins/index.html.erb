@@ -1,12 +1,14 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
 <%= search_form_for @search do |f| %>
-  <div class="search-field form-group">
+ 
+  <div class="search-form form-group">
     <%= f.label :price_gteq, "Price between" %>
-    <%= f.text_field :price_gteq %>
+    <%= f.text_field :price_gteq, class: "search-field" %>
     <%= f.label :price_lteq, "and" %>
-    <%= f.text_field :price_lteq %>
+    <%= f.text_field :price_lteq, class: "search-field" %>
     <%= f.submit "Search", class: "btn btn-default" %>
+    <%= f.submit "Clear", class: "btn btn-default", id:"q_reset" %>
   </div>
 <% end %>
 
