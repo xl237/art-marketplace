@@ -1,5 +1,15 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
+<%= search_form_for @search do |f| %>
+  <div class="search-field form-group">
+    <%= f.label :price_gteq, "Price between" %>
+    <%= f.text_field :price_gteq %>
+    <%= f.label :price_lteq, "and" %>
+    <%= f.text_field :price_lteq %>
+    <%= f.submit "Search", class: "btn btn-default" %>
+  </div>
+<% end %>
+
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
