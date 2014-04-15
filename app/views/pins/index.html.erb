@@ -1,6 +1,6 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
-<div class="panel search-panel"
+<div class="panel panel-default search-panel">
   <%= search_form_for @search do |f| %>
     <div class="search-group form-group">
       <%= f.label :user_name_cont, "Artist Name" %>
@@ -15,7 +15,7 @@
     </div>
 
     <div class="search-group form-group">
-      <%= f.submit "Search", class: "btn btn-primary" %>
+      <%= f.submit "Search", class: "btn btn-default" %>
       <%= f.submit "Clear", class: "btn btn-default", id:"q_reset" %>
     </div>  
   <% end %>
