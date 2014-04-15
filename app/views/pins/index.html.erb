@@ -1,16 +1,25 @@
 <%= render 'pages/home' unless user_signed_in? %>
 
-<%= search_form_for @search do |f| %>
- 
-  <div class="search-form form-group">
-    <%= f.label :price_gteq, "Price between" %>
-    <%= f.text_field :price_gteq, class: "search-field" %>
-    <%= f.label :price_lteq, "and" %>
-    <%= f.text_field :price_lteq, class: "search-field" %>
-    <%= f.submit "Search", class: "btn btn-default" %>
-    <%= f.submit "Clear", class: "btn btn-default", id:"q_reset" %>
-  </div>
-<% end %>
+<div class="panel search-panel"
+  <%= search_form_for @search do |f| %>
+    <div class="search-group form-group">
+      <%= f.label :user_name_cont, "Artist Name" %>
+      <%= f.text_field :user_name_cont, class: "search-field" %>
+    </div>
+
+    <div class="search-group form-group">
+      <%= f.label :price_gteq, "Price between" %>
+      <%= f.text_field :price_gteq, class: "search-field" %>
+      <%= f.label :price_lteq, "and" %>
+      <%= f.text_field :price_lteq, class: "search-field" %>
+    </div>
+
+    <div class="search-group form-group">
+      <%= f.submit "Search", class: "btn btn-primary" %>
+      <%= f.submit "Clear", class: "btn btn-default", id:"q_reset" %>
+    </div>  
+  <% end %>
+</div>
 
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
