@@ -29,7 +29,6 @@
         <%= pin.description %><br/>
         <strong><%= pin.user.name if pin.user %></strong><br/>
         $<%= pin.price %><br/>
-        <%= pin.medium %>
         <% if pin.user == current_user %>
           <div class="actions">
             <%= link_to edit_pin_path(pin) do %>
