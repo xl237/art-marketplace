@@ -3,3 +3,4 @@ class AddPriceToPins < ActiveRecord::Migration
     add_column :pins, :price, :integer
   end
 end
+
