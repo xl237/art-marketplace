@@ -28,6 +28,7 @@
       <div class="panel-body">
         <%= pin.description %><br/>
         <strong><%= pin.user.name if pin.user %></strong><br/>
+        <%= pin.user.email if pin.user %><br/>
         $<%= pin.price %><br/>
         <% if pin.user == current_user %>
           <div class="actions">
